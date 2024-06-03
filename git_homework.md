@@ -90,3 +90,22 @@ git log --oneline
 ```sh
 git log --oneline
 ```
+## Как создать pull request
+
+1. Делаем fork репозитория, в которой потом хотим сделать pull request. Ищем кнопку Fork на странице репозитория 
+2. Выполняем команду клонирования из своей fork-копии
+```sh
+git clone <ссылка на GitHub>
+```
+3. Создаем новую ветку и вносим необходимые изменения в файл
+```sh
+git checkout -b updatereadme
+vim README.md
+git add README.md
+git commit -m "Добавили инструкцию как создать pull request"
+```
+4. Делаем push  
+```sh
+git push --set-upstream origin updatereadme
+```
+5. Переходим на свою страницу репозитория. Выбираем ветку **updatereadme** и жмем кнопку **Compare & pull request**
